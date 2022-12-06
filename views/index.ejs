@@ -1,0 +1,53 @@
+<%- include("header") -%> 
+
+<section id="heading">
+    <div class="container-fluid ">
+        <div class="container">
+            <div class="row">
+              <div class="col first">
+                <img src="/images/man_thinking.jpg" class="img-fluid" alt="img">
+              </div>
+              <div class="col second">
+                <div class="right-heading">
+                    <h1>My Thoughts,</h1>
+                    <h1>Your views.</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>
+
+<section id="blogs">
+    <div class="container-fluid ">
+        <div class="blog-heading">
+            Recent Posts
+        </div>
+        <% for (let post of posts) { %>
+            <div class="container blogs">
+                <div class="row blogs">
+                    <div class="col blog-img">
+                        <% if (post.no <= 4) { %>
+                            <img src="/images/<%= post.no %>.jpg" class="img-fluid rounded" alt="imf" >
+                        <% } else { %> 
+                            <img src="/images/404.jpg" class="img-fluid rounded" alt="imf" >
+                            <% } %>
+                        </div>
+                    <div class="col blog-text">
+                        
+                            <div>
+                                <h1><%= post.heading %></h1>
+                                <p><%= post.subheading %></p>
+                            </div>
+                            <a href= "<%= '/post/' + post.no %> "><button type="button" class="btn btn-outline-light btn-lg">Read Me</button></a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+        <div class="add-button">
+            <a href= "/addPost"><button type="button" class="btn btn-outline-light btn-lg">Add Post</button></a>
+        </div>
+    </div>
+</section>
+
+<%- include("footer") -%> 

@@ -1,0 +1,23 @@
+<%- include("header")-%>
+
+<section id="post-heading">
+    <h1><%= post.heading  %></h1>
+    <p><%= post.subheading %></p>
+</section>
+
+<section id="post-img">
+    <div class="blog-img">
+        <% if (post.no < 5) { %>
+            <img src="/images/<%= post.no %>.jpg" class="img-fluid rounded" alt="imf" >
+        <% } else { %> 
+            <img src="/images/404.jpg" class="img-fluid rounded" alt="imf" >
+            <% } %> 
+    </div>
+</section>
+
+<section id="post-matter">
+    <div class="post-matter">
+        <p><%= post.matter  %></p>
+    </div>
+</section>
+<%- include("footer")-%>

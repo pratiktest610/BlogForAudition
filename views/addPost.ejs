@@ -1,0 +1,23 @@
+<%- include("header") %> 
+<div class="container-fluid postForm">
+    <form action="/addPost" method="post">
+    <div class="mb-3">
+        <label for="Input" class="form-label">Heading</label>
+        <input type="text" class="form-control" id="Input" name="heading" required>
+      </div>
+      <div class="mb-3">
+        <label for="Input2" class="form-label">SubHeading</label>
+        <input type="text" class="form-control" id="Input2" name="subheading" required>
+      </div>
+      <div class="mb-3">
+        <label for="Input3" class="form-label">Matter</label>
+        <textarea type="" class="form-control" id="Input3" rows="9" name="matter" required></textarea>
+      </div>
+      <div class="add-button">
+        <button type="submit" class="btn btn-outline-light btn-lg">Add Post</button>
+    </div>
+</form>
+</div>
+
+
+<%- include("footer") %> 
